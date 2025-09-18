@@ -43,12 +43,6 @@ Run `label_studio_export.py` to:
 - Pull project annotations from Label Studio (either direct export or via an export job).  
 - Merge edited fields back into the flattened dataset (`turns_train.json`).  
 - Inject the edits into the original fine-tuning JSONL file, producing a corrected copy in `data_finetune/`.  
-
-Example:
-```bash
-python label_studio_export.py
-```
-
 This will create a corrected JSONL file (e.g., `val_sk_02.jsonl`) that preserves original fields and updates edited turns.
 
 ## Key Functions
@@ -58,6 +52,5 @@ This will create a corrected JSONL file (e.g., `val_sk_02.jsonl`) that preserves
 - **inject_edits_into_jsonl** (`label_studio_export.py`): Applies edits back into the fine-tuning dataset, ensuring format consistency.  
 
 ## Next Steps / Improvements
-- Integrate compiled Asymptote image previews directly into the annotation UI for faster quality control.  
-- Add logging (via `logging` module) instead of print statements for better reproducibility.  
+- Integrate compiled Asymptote image previews directly into the annotation UI for faster quality control.
 - Streamline annotation export into batch jobs for large datasets.  
